@@ -1,0 +1,17 @@
+{
+  "name": "cafe-strandlicht",
+  "version": "1.0.0",
+  "description": "Bilingual (NL/EN) one-page website for a fictional beach café in Blankenberge, Belgium.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/site.test.mjs",
+    "validate": "html-validate index.html",
+    "serve": "npx --yes serve ."
+  },
+  "devDependencies": {
+    "html-validate": "^9.7.1",
+    "playwright": "^1.56.0"
+  },
+  "license": "MIT"
+}

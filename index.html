@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café Strandlicht · Blankenberge</title>
+  <meta name="description" content="Strandcafé op de dijk van Blankenberge: koffie, ontbijt, lunch, wafels en ijs met zicht op zee. (Demo-website, fictieve zaak.)">
+  <meta name="theme-color" content="#0f3b4c">
+  <meta property="og:title" content="Café Strandlicht · Blankenberge">
+  <meta property="og:description" content="Koffie, ontbijt, lunch en ijs met zicht op zee.">
+  <meta property="og:image" content="assets/img/hero.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230f3b4c'/%3E%3Ccircle cx='32' cy='30' r='11' fill='%23f2a65a'/%3E%3Cpath d='M8 42q12-8 24 0t24 0' stroke='%23fff' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Naar inhoud</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a href="#top" class="logo" aria-label="Café Strandlicht">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="currentColor"/><circle cx="32" cy="30" r="11" fill="#f2a65a"/><path d="M8 42q12-8 24 0t24 0" stroke="#fff" stroke-width="4" fill="none"/></svg>
+        <span>Strandlicht</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#menu" data-i18n="nav.menu">Menu</a>
+        <a href="#about" data-i18n="nav.about">Over ons</a>
+        <a href="#visit" data-i18n="nav.visit">Bezoek</a>
+        <a href="#contact" class="btn btn-small" data-i18n="nav.reserve">Reserveren</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="nl" aria-pressed="true">NL</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+    <div class="progress" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" data-parallax="0.35">
+        <img src="assets/img/hero.webp" alt="" width="1920" height="1080" fetchpriority="high">
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="wrap hero-content">
+        <p class="eyebrow hero-in" data-i18n="hero.eyebrow">Blankenberge · Zeedijk</p>
+        <h1 id="hero-title" class="hero-in" data-d="1" data-i18n="hero.title">Koffie met zicht op zee</h1>
+        <p class="lead hero-in" data-d="2" data-i18n="hero.lead">Ontbijt, lunch, wafels en ambachtelijk ijs — elke dag vers, met je voeten bijna in het zand.</p>
+        <div class="hero-cta hero-in" data-d="3">
+          <a href="#contact" class="btn" data-i18n="hero.cta">Tafel reserveren</a>
+          <a href="#menu" class="btn btn-ghost" data-i18n="hero.cta2">Bekijk het menu</a>
+        </div>
+      </div>
+      <a href="#marquee" class="scroll-hint" aria-label="Scroll"><span></span></a>
+      <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C240 90 480 10 720 40 S1200 80 1440 30 V90 H0Z"/></svg>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span data-i18n="marquee">Koffie · Ontbijt · Lunch · Wafels · IJs · Zonsondergang · </span>
+        <span data-i18n="marquee">Koffie · Ontbijt · Lunch · Wafels · IJs · Zonsondergang · </span>
+      </div>
+    </div>
+
+    <!-- MENU -->
+    <section class="section" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="menu.eyebrow">Onze kaart</p>
+          <h2 id="menu-title" data-i18n="menu.title">Eenvoudig, vers en lokaal</h2>
+        </header>
+
+        <div class="tabs reveal" role="tablist" aria-label="Menu">
+          <button type="button" role="tab" id="tab-coffee" aria-controls="panel-coffee" aria-selected="true" data-i18n="menu.tab.coffee">Koffie &amp; drank</button>
+          <button type="button" role="tab" id="tab-breakfast" aria-controls="panel-breakfast" aria-selected="false" tabindex="-1" data-i18n="menu.tab.breakfast">Ontbijt</button>
+          <button type="button" role="tab" id="tab-lunch" aria-controls="panel-lunch" aria-selected="false" tabindex="-1" data-i18n="menu.tab.lunch">Lunch</button>
+          <button type="button" role="tab" id="tab-sweet" aria-controls="panel-sweet" aria-selected="false" tabindex="-1" data-i18n="menu.tab.sweet">Wafels &amp; ijs</button>
+        </div>
+
+        <div class="menu-grid">
+          <figure class="menu-photo reveal">
+            <img id="menu-img" src="assets/img/coffee.webp" alt="" width="900" height="900" loading="lazy">
+          </figure>
+          <div class="panels">
+            <div class="panel" role="tabpanel" id="panel-coffee" aria-labelledby="tab-coffee" data-img="assets/img/coffee.webp"></div>
+            <div class="panel" role="tabpanel" id="panel-breakfast" aria-labelledby="tab-breakfast" data-img="assets/img/breakfast.webp" hidden></div>
+            <div class="panel" role="tabpanel" id="panel-lunch" aria-labelledby="tab-lunch" data-img="assets/img/lunch.webp" hidden></div>
+            <div class="panel" role="tabpanel" id="panel-sweet" aria-labelledby="tab-sweet" data-img="assets/img/waffle.webp" hidden></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <figure class="about-photo reveal reveal-left">
+          <div class="about-img" data-parallax="-0.08"><img src="assets/img/interior.webp" alt="" width="1200" height="900" loading="lazy"></div>
+        </figure>
+        <div class="about-text">
+          <p class="eyebrow reveal" data-i18n="about.eyebrow">Ons verhaal</p>
+          <h2 id="about-title" class="reveal" data-i18n="about.title">Een klein café met een groot terras</h2>
+          <p class="reveal" data-i18n="about.p1">Strandlicht begon met één espressomachine en een paar strandstoelen. Vandaag zetten we nog steeds elke kop met dezelfde zorg — met bonen van een kleine Belgische brander.</p>
+          <p class="reveal" data-i18n="about.p2">We bakken onze wafels zelf, halen garnalen bij de vissers van de kust en draaien ons ijs elke ochtend vers.</p>
+          <ul class="stats">
+            <li class="reveal"><strong data-count="7">0</strong><span data-i18n="about.s1">dagen per week open in de zomer</span></li>
+            <li class="reveal" data-d="1"><strong data-count="60">0</strong><span data-i18n="about.s2">plaatsen op het terras</span></li>
+            <li class="reveal" data-d="2"><strong data-count="12">0</strong><span data-i18n="about.s3">smaken huisgemaakt ijs</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="section visit" id="visit" aria-labelledby="visit-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="visit.eyebrow">Bezoek ons</p>
+          <h2 id="visit-title" data-i18n="visit.title">Openingsuren &amp; ligging</h2>
+        </header>
+        <div class="visit-grid">
+          <div class="card reveal">
+            <h3 data-i18n="visit.hours">Openingsuren</h3>
+            <table class="hours">
+              <tbody>
+                <tr data-day="1"><th data-i18n="day.mon">Maandag</th><td data-i18n="closed">Gesloten</td></tr>
+                <tr data-day="2"><th data-i18n="day.tue">Dinsdag</th><td>09:00 – 18:00</td></tr>
+                <tr data-day="3"><th data-i18n="day.wed">Woensdag</th><td>09:00 – 18:00</td></tr>
+                <tr data-day="4"><th data-i18n="day.thu">Donderdag</th><td>09:00 – 18:00</td></tr>
+                <tr data-day="5"><th data-i18n="day.fri">Vrijdag</th><td>09:00 – 21:00</td></tr>
+                <tr data-day="6"><th data-i18n="day.sat">Zaterdag</th><td>08:30 – 21:00</td></tr>
+                <tr data-day="0"><th data-i18n="day.sun">Zondag</th><td>08:30 – 19:00</td></tr>
+              </tbody>
+            </table>
+            <p class="note" data-i18n="visit.note">Juli &amp; augustus: elke dag open.</p>
+            <p class="open-now" id="open-now" aria-live="polite"></p>
+          </div>
+          <div class="card reveal" data-d="1">
+            <h3 data-i18n="visit.where">Waar</h3>
+            <address>
+              Café Strandlicht<br>
+              Zeedijk (<span data-i18n="demo.addr">demo-adres</span>)<br>
+              8370 Blankenberge<br>
+              <a href="tel:+3250000000">+32&nbsp;50&nbsp;00&nbsp;00&nbsp;00</a><br>
+              <a href="mailto:hallo@cafe-strandlicht.example">hallo@cafe-strandlicht.example</a>
+            </address>
+            <p class="note" data-i18n="visit.transport">5 min wandelen van station Blankenberge · kusttram halte Casino.</p>
+          </div>
+          <div class="map reveal" data-d="2">
+            <iframe title="Map Blankenberge" loading="lazy"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=3.1220%2C51.3080%2C3.1420%2C51.3180&amp;layer=mapnik&amp;marker=51.3133%2C3.1316"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Reserveren</p>
+          <h2 id="contact-title" data-i18n="contact.title">Hou een tafel voor ons vrij</h2>
+          <p data-i18n="contact.lead">Voor groepen vanaf 6 personen raden we reserveren aan. We antwoorden binnen 24 uur.</p>
+        </div>
+        <form id="contact-form" class="form reveal" novalidate>
+          <div class="row">
+            <label><span data-i18n="f.name">Naam</span>
+              <input type="text" name="name" autocomplete="name" required minlength="2">
+              <small class="err" data-for="name"></small>
+            </label>
+            <label><span data-i18n="f.email">E-mail</span>
+              <input name="email" type="email" autocomplete="email" required>
+              <small class="err" data-for="email"></small>
+            </label>
+          </div>
+          <div class="row">
+            <label><span data-i18n="f.date">Datum</span>
+              <input name="date" type="date" required>
+              <small class="err" data-for="date"></small>
+            </label>
+            <label><span data-i18n="f.guests">Aantal personen</span>
+              <input name="guests" type="number" min="1" max="20" value="2" required>
+              <small class="err" data-for="guests"></small>
+            </label>
+          </div>
+          <label><span data-i18n="f.message">Bericht (optioneel)</span>
+            <textarea name="message" rows="4" maxlength="1000"></textarea>
+          </label>
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
+          <button type="submit" class="btn" data-i18n="f.send">Verstuur</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Café Strandlicht · Blankenberge</p>
+      <p class="demo" data-i18n="footer.demo">Demo-website — fictieve zaak, gemaakt als portfolioproject.</p>
+      <a href="#top" data-i18n="footer.top">Terug naar boven ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
